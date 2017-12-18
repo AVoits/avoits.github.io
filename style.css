@@ -146,7 +146,6 @@ body {
 
 div {
     padding: 8px;
-    border: 1px solid salmon;
 }
 
 div:nth-child(1) {
