@@ -87,7 +87,7 @@ body {
   }
 
   @for $i from 1 through $grid-columns {
-    .column-sm-res-#{$i} {
+    .column-sm-#{$i} {
       width: 100% / $grid-columns * $i;
     }
   }
