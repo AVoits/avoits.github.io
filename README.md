@@ -1,8 +1,11 @@
-# avoits.github.io
+> <a href="https://avoits.github.io/responsive-web-design/resp.html">Пример адаптивно-отзывчивой верстки</a>
 
 
-<a href="https://avoits.github.io/" target="_blank"> avoits</a>
+Резиновая верстка: элементы меняют свою ширину в зависимости от размера окна браузера.
 
-<a href="https://avoits.github.io/responsive-web-design/resp.html">Test</a>
+Адаптивная верстка: Изменение "рывком" при переходе breakpoint.
+
+Отзывчивая верстка: сочетание адаптивной и резиновой. Изменения происходят так же в breakpoint, но плавно.
 
 
+В данном примере переход между wide и middle сделан адаптивно, переход между middle и tight отзывчиво.
