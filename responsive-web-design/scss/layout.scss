@@ -1,0 +1,113 @@
+@import "variables";
+@import "mixins";
+
+html,
+body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: #282d30;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: #{$tight-width};
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+}
+
+
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  //background-color: greenyellow;
+}
+
+.wrapper, .row {
+  @extend %clearfix;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+[class*='column-'] {
+  //float: left;
+  padding: 0 10px 10px 10px;
+  width: 100%;
+  min-height: 1px;
+}
+
+
+@media #{$breakpoint-wide} {
+
+  $grid-columns: 6;
+
+  .wrapper {
+    width: 100%;
+    max-width: $wide-width;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .column-wd-#{$i} {
+      width: 100% / $grid-columns * $i;
+    }
+  }
+}
+
+@media #{$breakpoint-middle} {
+  $grid-columns: 6;
+
+  .wrapper {
+    width: 100%;
+    max-width: $middle-width;
+  }
+  @for $i from 1 through $grid-columns {
+    .column-md-#{$i} {
+      width: 100% / $grid-columns * $i;
+    }
+  }
+}
+
+@media #{$breakpoint-tight-res} {
+  $grid-columns: 2;
+
+  .wrapper {
+    width: 100%;
+    max-width: $middle-width;
+  }
+
+  .row {
+    flex-wrap: wrap;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .column-sm-res-#{$i} {
+      width: 100% / $grid-columns * $i;
+    }
+  }
+}
+
+@media #{$breakpoint-tight} {
+  $grid-columns: 2;
+
+  .wrapper {
+    width: 100%;
+    max-width: $tight-width;
+  }
+
+  .row {
+    flex-wrap: wrap;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .column-sm-#{$i} {
+      width: 100% / $grid-columns * $i;
+    }
+  }
+}

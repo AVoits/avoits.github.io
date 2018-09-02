@@ -1,0 +1,18 @@
+//colors
+$red: #c4092f;
+$light-red: #d74345;
+$green: #88c504;
+$gray: #cbcbcc;
+$dark-gray: #8b9497;
+
+
+
+// breakpoints
+$wide-width: 978px;
+$middle-width: 720px;
+$tight-width: 360px;
+
+$breakpoint-wide: "all and (min-width: #{$wide-width})";
+$breakpoint-middle: "all and (min-width: #{$tight-width}) and (max-width: #{$wide-width} - 1px)";
+$breakpoint-tight-res: "all and (min-width: #{$tight-width}) and (max-width: #{$middle-width} - 1px)";
+$breakpoint-tight: "all and (max-width: #{$tight-width})";

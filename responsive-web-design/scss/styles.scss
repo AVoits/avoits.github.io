@@ -1,0 +1,97 @@
+@import "variables";
+@import "mixins";
+
+
+@import "layout";
+@import "typography";
+@import "customSelect";
+@import "form";
+@import "table";
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  @include border-box;
+}
+
+
+
+
+
+header {
+  background-color: #282d30;
+  height: 110px;
+  padding-top: 10px;
+  @include tight-res {
+    height: 100px;
+  }
+
+  @include tight {
+    height: 67px;
+  }
+}
+
+
+#logo {
+  background-image: url("../img/logo@1x.png");
+  background-repeat: no-repeat;
+  width: 498px;
+  height: 108px;
+
+  @include wide {
+    //margin-left: 211px;
+    margin: 0 auto;
+  }
+
+  @include middle {
+    //margin-left: 86px;
+    margin: 0 auto;
+  }
+
+  @include tight-res {
+    margin: 0 auto;
+    width: 95%;
+    max-width: 498px;
+    background-size: contain;
+  }
+
+  @include tight {
+    margin: 0 auto;
+    width: 297px;
+    height: 62px;
+    background-size: cover;
+  }
+
+  @include retina {
+    background-image: url("../img/logo@2x.png");
+    background-size: contain;
+  }
+}
+
+
+
+footer {
+  background-color: #282d30;
+  flex: 0 0 auto;
+
+  font-size: 11px;
+  font-weight: 300;
+
+  height: 102px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include tight {
+    height: 66px;
+  }
+
+  color: white;
+  text-align: center;
+}
+
+
+

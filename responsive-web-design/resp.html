@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Web Design</title>
+    <meta name="charset" content="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css">
+
+</head>
+
+
+<body>
+<div class="container">
+    <header>
+        <div class="wrapper">
+            <div id="logo"></div>
+        </div>
+
+    </header>
+    <main>
+        <h1>¡Ay caramba!</h1>
+
+        <section class="wrapper filter">
+
+            <div class="row">
+                <div class="column-wd-2 column-md-2 column-sm-res-1 column-sm-2">
+                    <div class="input-title">Название</div>
+                    <input type="text" placeholder="Название" id="name">
+                </div>
+                <div class="column-wd-2 column-md-2 column-sm-res-1 column-sm-1">
+                    <div class="input-title">Год</div>
+                    <input type="text" id="year" placeholder="Год">
+                </div>
+                <div class="column-wd-2 column-md-2 column-sm-res-1 column-sm-1">
+                    <div class="input-title">Цена</div>
+                    <input type="text" id="cost" value="50">
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="column-6">
+                    <div class="input-title">Описание</div>
+                    <input id="desc" type="text">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column-wd-2 column-md-2 column-sm-res-1 column-sm-2">
+                    <div class="input-title">Цвет</div>
+                    <div class="radio-wrapper">
+                        <label class="container">
+                            <input type="radio" name="car-color">
+                            <span class="checkmark" id="color__white"></span></label>
+                        <label class="container">
+                            <input type="radio" name="car-color">
+                            <span class="checkmark" id="color__black"></span>
+                        </label>
+                        <label class="container">
+                            <input type="radio" checked="checked" name="car-color">
+                            <span class="checkmark" id="color__gray"></span>
+                        </label>
+                        <label class="container">
+                            <input type="radio" name="car-color">
+                            <span class="checkmark" id="color__red"></span>
+                        </label>
+                        <label class="container">
+                            <input type="radio" name="car-color">
+                            <span class="checkmark" id="color__green"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="column-wd-2 column-md-2 column-sm-res-1 column-sm-1">
+                    <div class="input-title">Статус</div>
+                    <div class="custom-select">
+                        <select id="status">
+                            <option value="0">Статус</option>
+                            <option value="1">В наличии</option>
+                            <option value="2">Ожидается</option>
+                            <option value="3">Нет в наличии</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="column-wd-2 column-md-2 column-sm-res-1 column-sm-1">
+                    <div class="input-title">&nbsp;</div>
+                    <button type="submit" class="btn btn-primary"><span>Отправить</span><i
+                            class="fas fa-angle-right fa-lg"></i></button>
+                </div>
+            </div>
+
+        </section>
+        <section class="wrapper filter-result">
+            <h2>Автомобили в наличии</h2>
+            <table id="cars" border="0" cellpadding="0" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>Год</th>
+                    <th>Цвет</th>
+                    <th>Статус</th>
+                    <th>Цена</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class='car-desc'>1.6 MT Ambiente 85 л.с. МКПП</div>
+                        <div class='car-desc-sub'>+ доп. опция «Радио-навигационная система Amundasen 2DIN, CD, MP3
+                        </div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-year'>2012</div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-color white'></div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-status'>Нет в наличии</div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-cost'>1 680 000 руб.</div>
+
+                    </td>
+
+                    <td>
+                        <button class='btn btn-secondary'>Удалить</button>
+
+                    </td>
+
+                    <td>
+                        <div class='card'>
+                            <div class='line_1'>
+                                <div>
+                                    <div class='car-desc'>1.6 MT Ambiente 85 л.с. МКПП</div>
+                                </div>
+                                
+                                <div>
+                                    <div class='car-color white'></div>
+                                    <div class='car-cost'>1 680 000 руб.</div>
+                                </div>
+                                 
+                            </div>
+
+                            <div class='line_2'>
+                                <div class='car-desc-sub'>+ доп. опция «Радио-навигационная система Amundasen 2DIN, CD,
+                                    MP3
+                                </div>
+                            </div>
+
+                            <div class='line_3'>
+                                <div>
+                                    <div class='car-year'>2012</div>
+                                    <div class='car-status'>Нет в наличии</div>
+                                </div>
+                                <div class='car-action'>
+                                    <button class='btn btn-secondary'>Удалить</button>
+
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class='car-desc'>1.6 MT Ambiente 85 л.с. МКПП</div>
+
+                        <div class='car-desc-sub'>+ доп. опция «Радио-навигационная система Amundasen 2DIN, CD, MP3
+                        </div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-year'>2014</div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-color red'></div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-status'>Ожидается</div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-cost'>980 000 руб.</div>
+
+                    </td>
+
+                    <td>
+                        <button class='btn btn-secondary'>Удалить</button>
+
+                    </td>
+
+                    <td>
+                        <div class='card'>
+                            <div class='line_1'>
+                                <div>
+                                    <div class='car-desc'>1.6 MT Ambiente 85 л.с. МКПП</div>
+                                </div>
+                                
+                                <div>
+                                    <div class='car-color red'></div>
+                                    <div class='car-cost'>1 680 000 руб.</div>
+                                </div>
+                                 
+                            </div>
+
+                            <div class='line_2'>
+                                <div class='car-desc-sub'>+ доп. опция «Радио-навигационная система Amundasen 2DIN, CD,
+                                    MP3
+                                </div>
+                            </div>
+
+                            <div class='line_3'>
+                                <div>
+                                    <div class='car-year'>2012</div>
+                                    <div class='car-status'>Нет в наличии</div>
+                                </div>
+                                <div class='car-action'>
+                                    <button class='btn btn-secondary'>Удалить</button>
+
+                                </div>
+                                
+                            </div>
+
+                        </div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class='car-desc'>1.7 MT Ambiente 85 л.с. МКПП</div>
+
+                        <div class='car-desc-sub'></div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-year'>2000</div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-color black'></div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-status'>В наличии</div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-cost'>1 680 000 руб.</div>
+
+                    </td>
+
+                    <td>
+                        <button class='btn btn-secondary'>Удалить</button>
+
+                    </td>
+
+                    <td>
+                        <div class='card'>
+                            <div class='line_1'>
+                                <div>
+                                    <div class='car-desc'>1.6 MT Ambiente 85 л.с. МКПП</div>
+                                </div>
+                                
+                                <div>
+                                    <div class='car-color black'></div>
+                                    <div class='car-cost'>1 680 000 руб.</div>
+                                </div>
+                                 
+                            </div>
+
+                            <div class='line_2'>
+                                <div class='car-desc-sub'>+ доп. опция «Радио-навигационная система Amundasen 2DIN, CD,
+                                    MP3
+                                </div>
+                            </div>
+
+                            <div class='line_3'>
+                                <div>
+                                    <div class='car-year'>2012</div>
+                                    <div class='car-status'>Нет в наличии</div>
+                                </div>
+                                <div class='car-action'>
+                                    <button class='btn btn-secondary'>Удалить</button>
+
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class='car-desc'>1.6 MT Ambiente 85 л.с. МКПП</div>
+
+                        <div class='car-desc-sub'>+ доп. опция «Радио-навигационная система Amundasen 2DIN, CD, MP3
+                        </div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-year'>2012</div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-color gray'></div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-status'>Нет в наличии</div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-cost'>1 680 000 руб.</div>
+
+                    </td>
+
+                    <td>
+                        <button class='btn btn-secondary'>Удалить</button>
+
+                    </td>
+
+                    <td>
+                        <div class='card'>
+                            <div class='line_1'>
+                                <div>
+                                    <div class='car-desc'>1.6 MT Ambiente 85 л.с. МКПП</div>
+                                </div>
+                                
+                                <div>
+                                    <div class='car-color gray'></div>
+                                    <div class='car-cost'>1 680 000 руб.</div>
+                                </div>
+                                 
+                            </div>
+
+                            <div class='line_2'>
+                                <div class='car-desc-sub'>+ доп. опция «Радио-навигационная система Amundasen 2DIN, CD,
+                                    MP3
+                                </div>
+                            </div>
+
+                            <div class='line_3'>
+                                <div>
+                                    <div class='car-year'>2012</div>
+                                    <div class='car-status'>Нет в наличии</div>
+                                </div>
+                                <div class='car-action'>
+                                    <button class='btn btn-secondary'>Удалить</button>
+
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class='car-desc'>1.6 MT Ambiente 85 л.с. МКПП</div>
+
+                        <div class='car-desc-sub'>+ доп. опция «Радио-навигационная система Amundasen 2DIN, CD, MP3
+                        </div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-year'>2012</div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-color green'></div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-status'>Нет в наличии</div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-cost'>1 680 000 руб.</div>
+
+                    </td>
+
+                    <td>
+                        <button class='btn btn-secondary'>Удалить</button>
+
+                    </td>
+
+                    <td>
+                        <div class='card'>
+                            <div class='line_1'>
+                                <div>
+                                    <div class='car-desc'>1.6 MT Ambiente 85 л.с. МКПП</div>
+                                </div>
+                                
+                                <div>
+                                    <div class='car-color green'></div>
+                                    <div class='car-cost'>1 680 000 руб.</div>
+                                </div>
+                                 
+                            </div>
+
+                            <div class='line_2'>
+                                <div class='car-desc-sub'>+ доп. опция «Радио-навигационная система Amundasen 2DIN, CD,
+                                    MP3
+                                </div>
+                            </div>
+
+                            <div class='line_3'>
+                                <div>
+                                    <div class='car-year'>2012</div>
+                                    <div class='car-status'>Нет в наличии</div>
+                                </div>
+                                <div class='car-action'>
+                                    <button class='btn btn-secondary'>Удалить</button>
+
+                                </div>
+                                
+                            </div>
+
+                        </div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class='car-desc'>1.6 MT Ambiente 85 л.с. МКПП</div>
+
+                        <div class='car-desc-sub'></div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-year'>2012</div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-color red'></div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-status'>Ожидается</div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-cost'>1 680 000 руб.</div>
+
+                    </td>
+
+                    <td>
+                        <button class='btn btn-secondary'>Удалить</button>
+
+                    </td>
+
+                    <td>
+                        <div class='card'>
+                            <div class='line_1'>
+                                <div>
+                                    <div class='car-desc'>1.6 MT Ambiente 85 л.с. МКПП</div>
+                                </div>
+                                
+                                <div>
+                                    <div class='car-color red'></div>
+                                    <div class='car-cost'>1 680 000 руб.</div>
+                                </div>
+                                 
+                            </div>
+
+                            <div class='line_2'>
+                                <div class='car-desc-sub'>+ доп. опция «Радио-навигационная система Amundasen 2DIN, CD,
+                                    MP3
+                                </div>
+                            </div>
+
+                            <div class='line_3'>
+                                <div>
+                                    <div class='car-year'>2012</div>
+                                    <div class='car-status'>Нет в наличии</div>
+                                </div>
+                                <div class='car-action'>
+                                    <button class='btn btn-secondary'>Удалить</button>
+
+                                </div>
+                                
+                            </div>
+
+                        </div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class='car-desc'>1.6 MT Ambiente 85 л.с. МКПП</div>
+
+                        <div class='car-desc-sub'>+ доп. опция «Радио-навигационная система Amundasen 2DIN, CD, MP3
+                        </div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-year'>2012</div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-color white'></div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-status'>Нет в наличии</div>
+
+                    </td>
+
+                    <td>
+                        <div class='car-cost'>1 680 000 руб.</div>
+
+                    </td>
+
+                    <td>
+                        <button class='btn btn-secondary'>Удалить</button>
+
+                    </td>
+
+                    <td>
+                        <div class='card'>
+                            <div class='line_1'>
+                                <div>
+                                    <div class='car-desc'>1.6 MT Ambiente 85 л.с. МКПП</div>
+                                </div>
+                                
+                                <div>
+                                    <div class='car-color white'></div>
+                                    <div class='car-cost'>1 680 000 руб.</div>
+                                </div>
+                                 
+                            </div>
+
+                            <div class='line_2'>
+                                <div class='car-desc-sub'>+ доп. опция «Радио-навигационная система Amundasen 2DIN, CD,
+                                    MP3
+                                </div>
+                            </div>
+
+                            <div class='line_3'>
+                                <div>
+                                    <div class='car-year'>2012</div>
+                                    <div class='car-status'>Нет в наличии</div>
+                                </div>
+                                <div class='car-action'>
+                                    <button class='btn btn-secondary'>Удалить</button>
+
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</div>
+<footer>
+    <div class="copyright">
+        <div>© 2015 CAPTAIN QUACK</div>
+        <div>Десница тысячелетия и моллюск!</div>
+    </div>
+</footer>
+
+<script>
+    var x, i, j, selElmnt, a, b, c;
+    /*look for any elements with the class "custom-select":*/
+    x = document.getElementsByClassName("custom-select");
+    for (i = 0; i < x.length; i++) {
+        selElmnt = x[i].getElementsByTagName("select")[0];
+        /*for each element, create a new DIV that will act as the selected item:*/
+        a = document.createElement("DIV");
+        a.setAttribute("class", "select-selected");
+        a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+        x[i].appendChild(a);
+        /*for each element, create a new DIV that will contain the option list:*/
+        b = document.createElement("DIV");
+        b.setAttribute("class", "select-items select-hide");
+        for (j = 1; j < selElmnt.length; j++) {
+            /*for each option in the original select element,
+            create a new DIV that will act as an option item:*/
+            c = document.createElement("DIV");
+            c.innerHTML = selElmnt.options[j].innerHTML;
+            c.addEventListener("click", function (e) {
+                /*when an item is clicked, update the original select box,
+                and the selected item:*/
+                var y, i, k, s, h;
+                s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                h = this.parentNode.previousSibling;
+                for (i = 0; i < s.length; i++) {
+                    if (s.options[i].innerHTML == this.innerHTML) {
+                        s.selectedIndex = i;
+                        h.innerHTML = this.innerHTML;
+                        y = this.parentNode.getElementsByClassName("same-as-selected");
+                        for (k = 0; k < y.length; k++) {
+                            y[k].removeAttribute("class");
+                        }
+                        this.setAttribute("class", "same-as-selected");
+                        break;
+                    }
+                }
+                h.click();
+            });
+            b.appendChild(c);
+        }
+        x[i].appendChild(b);
+        a.addEventListener("click", function (e) {
+            /*when the select box is clicked, close any other select boxes,
+            and open/close the current select box:*/
+            e.stopPropagation();
+            closeAllSelect(this);
+            this.nextSibling.classList.toggle("select-hide");
+            this.classList.toggle("select-arrow-active");
+        });
+    }
+
+    function closeAllSelect(elmnt) {
+        /*a function that will close all select boxes in the document,
+        except the current select box:*/
+        var x, y, i, arrNo = [];
+        x = document.getElementsByClassName("select-items");
+        y = document.getElementsByClassName("select-selected");
+        for (i = 0; i < y.length; i++) {
+            if (elmnt == y[i]) {
+                arrNo.push(i)
+            } else {
+                y[i].classList.remove("select-arrow-active");
+            }
+        }
+        for (i = 0; i < x.length; i++) {
+            if (arrNo.indexOf(i)) {
+                x[i].classList.add("select-hide");
+            }
+        }
+    }
+
+    /*if the user clicks anywhere outside the select box,
+    then close all select boxes:*/
+    document.addEventListener("click", closeAllSelect);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+.filter-result
+  padding: 0 10px
+  overflow: hidden
+  @include tight
+    padding: 0
+
+#cars
+  width: 100%
+  background-color: #f5f6f6
+  border: 0px
+  margin-bottom: 30px
+  border-collapse: collapse
+  @include tight
+    margin-bottom: 0
+
+  thead
+    background-color: #c4092f
+    color: #ffffff
+    border-radius: 4px 0 0 0
+
+    @include tight-res
+      display: none
+
+    @include tight
+      display: none
+
+    th
+      text-align: left
+      font-weight: 500
+      padding: 15px
+
+      &:first-of-type
+        border-radius: 4px 0 0 0
+
+      &:last-of-type
+        border-radius: 0 4px 0 0
+
+      @include middle
+        padding: 15px 8px
+
+  tbody
+    font-weight: 300
+    font-size: 15px
+    tr
+      @include tight-res
+        padding: 20px
+        display: block
+        border: 1px solid #e2e3e3
+
+      @include tight
+        padding: 20px
+        display: block
+        border: 1px solid #e2e3e3
+
+      td
+        padding: 10px 16px
+        border-bottom: 1px solid #e2e3e3
+
+        @include middle
+          padding: 8px
+
+        @include tight-res
+          padding: 0
+
+        @include tight
+          padding: 0
+
+      td:nth-child(1)
+        @include middle
+          padding: 8px 8px 8px 16px
+
+      td:nth-child(-n+6)
+        @include tight-res
+          display: none
+          visibility: hidden
+
+        @include tight
+          display: none
+          visibility: hidden
+
+      td:nth-of-type(7)
+        @include wide
+          display: none
+          visibility: hidden
+
+        @include middle
+          display: none
+          visibility: hidden
+
+        @include tight-res
+          display: block
+          visibility: visible
+          border-bottom: none
+
+        @include tight
+          display: block
+          visibility: visible
+          border-bottom: none
+
+
+      .card
+        display: flex
+        flex-direction: column
+
+        .line_1
+          display: flex
+          &>div
+            width: 50%
+
+          &>div:last-of-type
+            display: flex
+            justify-content: flex-end
+
+        .line_2
+          padding-bottom: 6px
+
+        .line_3
+          display: flex
+          align-items: center
+          &>div
+            width: 50%
+
+          &>div:first-of-type
+            display: flex
+
+          &>div:last-of-type
+            display: flex
+            justify-content: flex-end
+
+
+
+
+      .car-desc
+
+        font-size: 14px
+        color: #323232
+
+        //@include tight-res
+        //  max-width: 200px
+        //@include tight
+        //  max-width: 150px
+
+
+      .car-desc-sub
+        font-size: 12px
+        color: #8b9497
+        padding-top: 6px
+        max-width: 430px
+
+      .car-year
+        white-space: nowrap
+        @include tight-res
+          margin-right: 20px
+        @include tight
+          margin-right: 20px
+
+      .car-color
+        display: block
+        width: 20px
+        height: 20px
+        border-radius: 50%
+      .car-color.white
+        background-color: white
+        box-shadow: 0 0 0 1px $dark-gray inset
+      .car-color.black
+        background-color: black
+      .car-color.red
+        background-color: $red
+      .car-color.gray
+        background-color: $gray
+      .car-color.green
+        background-color: $green
+
+
+      .car-status
+        white-space: nowrap
+
+
+      .car-cost
+        white-space: nowrap
+        @include tight-res
+          margin-left: 20px
+        @include tight
+          margin-left: 20px
+
+
+      .car-action
+        @include tight-res
+          .btn-secondary
+            background-color: #e3e3e3
+            width: auto
+            &:hover
+              background-color: #282d30
+              color: white
+
+            &:focus
+              outline: none
+              border: none
+
+            &:active
+              outline: none
+              border: none
+              background-color: $light-red
+
+        @include tight
+          .btn-secondary
+            background-color: #e3e3e3
+            width: auto
+            &:hover
+              background-color: #282d30
+              color: white
+
+            &:focus
+              outline: none
+              border: none
+
+            &:active
+              outline: none
+              border: none
+              background-color: $light-red
+
+

@@ -1,0 +1,59 @@
+@import "variables";
+
+@mixin border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+
+%clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+
+
+@mixin wide {
+  @media all and (min-width: #{$wide-width}) {@content;}
+}
+
+@mixin middle {
+  @media all and (min-width: #{$tight-width}) and (max-width: #{$wide-width} - 1px) {@content;}
+}
+
+@mixin tight-res {
+  @media all and (min-width: #{$tight-width}) and (max-width: #{$middle-width} - 1px) {@content;}
+}
+
+@mixin tight {
+  @media all and (max-width: #{$tight-width}) {@content;}
+}
+
+
+
+@mixin retina {
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 1300px),
+  only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1300px),
+  only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1300px),
+  only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1300px),
+  only screen and (                min-resolution: 192dpi) and (min-width: 1300px),
+  only screen and (                min-resolution: 2dppx)  and (min-width: 1300px) {
+
+    @content;
+
+  }
+}
+
+
+
