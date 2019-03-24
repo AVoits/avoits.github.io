@@ -1,5 +1,6 @@
 > <a href="https://avoits.github.io/responsive-web-design/resp.html">Пример адаптивно-отзывчивой верстки</a>
 
+> <a href="https://avoits.github.io/station/build/index.html">Station</a>
 
 Резиновая верстка: элементы меняют свою ширину в зависимости от размера окна браузера.
 
